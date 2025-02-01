@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Gerado pelo ChatGPT",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "rp2040", "id": "chip", "x": 0, "y": 0, "rotate": 0 },
+    { "type": "ws2812", "id": "led_matrix", "x": -50, "y": -50, "matrix": {"rows": 5, "cols": 5} },
+    { "type": "button", "id": "btn_a", "x": 50, "y": -50, "color": "blue" },
+    { "type": "button", "id": "btn_b", "x": 80, "y": -50, "color": "red" },
+    { "type": "led", "id": "led_red", "x": 50, "y": 50, "color": "red" },
+    { "type": "led", "id": "led_green", "x": 80, "y": 50, "color": "green" },
+    { "type": "led", "id": "led_blue", "x": 110, "y": 50, "color": "blue" }
+  ],
+  "connections": [
+    { "from": "chip:GP7", "to": "led_matrix:DI" },
+    { "from": "chip:GP5", "to": "btn_a:1" },
+    { "from": "btn_a:2", "to": "chip:GND" },
+    { "from": "chip:GP6", "to": "btn_b:1" },
+    { "from": "btn_b:2", "to": "chip:GND" },
+    { "from": "chip:GP11", "to": "led_red:A" },
+    { "from": "led_red:C", "to": "chip:GND" },
+    { "from": "chip:GP12", "to": "led_green:A" },
+    { "from": "led_green:C", "to": "chip:GND" },
+    { "from": "chip:GP13", "to": "led_blue:A" },
+    { "from": "led_blue:C", "to": "chip:GND" }
+  ]
+}
