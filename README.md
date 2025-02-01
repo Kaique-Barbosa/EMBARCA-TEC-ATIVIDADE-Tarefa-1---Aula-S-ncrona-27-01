@@ -2,6 +2,7 @@
 atividade usando a placa BitDogLab. PDF de referencia: U4C4O12T - Tarefa WLS
 
 OBS: estarei anexando nos arquivos o video pedido.
+estou enfrentando bug com o wokwi, não consigo fazer a simulação, fiz os testes diretamente na placa.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
